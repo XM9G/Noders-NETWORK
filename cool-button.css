@@ -1,4 +1,4 @@
-.button {
+.join {
     display: inline-block;
     border-radius: 4px;
     background-color: #000000;
@@ -15,14 +15,14 @@
     font-family: 'VT323', monospace;;
   }
   
-  .button span {
+  .join span {
     cursor: help;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  .button span:after {
+  .join span:after {
     content: '    \00bb\00bb';
     position: absolute;
     opacity: 0;
@@ -31,11 +31,14 @@
     transition: 0.5s;
   }
   
-  .button:hover span {
+  .join:hover span {
     padding-right: 25px;
   }
   
-  .button:hover span:after {
+  .join:hover span:after {
     opacity: 1;
     right: 0;
   }
+
+          /* SHARE */
+  
