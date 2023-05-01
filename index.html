@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="cool-button.css">
     <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="share.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
 
 
@@ -29,11 +30,30 @@
         To join our network, you can simply download our software onto your computer. Once you've installed the software, your computer will automatically become part of our network.
         
         We are excited to bring this network to you soon and will keep you updated with any developments. Get ready to make a positive impact on the world!</p>
-        <button class="button" id="join" style="display: block;margin-left: auto;margin-right: auto;width: auto;"><span>Join the Network </span></button>
+        <button class="join" id="join" style="display: block;margin-left: auto;margin-right: auto;width: auto;"><span>Join the Network </span></button>
         <script>
             document.getElementById("join").onclick = function () {
                 alert("We are still in development. Check back later!")
                 // location.href = "node-form.html";
             };</script>
+    <script>
+    function share() {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Join the NODERS NETWORK today!',
+            text: "Welcome to a community of volunteers who want to use their computer's capabilities to make a difference in the world.",
+            url: 'https://bit.ly/NodersNETWORK'
+          })
+          .then(() => console.log('Successfully shared'))
+          .catch((error) => console.error('Error sharing:', error));
+        } else {
+          console.log('Web Share API not supported');
+          alert("Couldn't share")
+        }
+      }
+      </script>
+    <button onclick="share()" class="share" id="share" style="display: block;margin-left: auto;margin-right: auto;width: auto; ">Invite your friends!</button>
+    
+        
 
 </body>
